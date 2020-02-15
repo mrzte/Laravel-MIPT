@@ -1,5 +1,6 @@
-window._ = require('lodash');
-
+window._ = require("lodash");
+window.Popper = require("popper.js").default;
+require("datatables.net-bs4");
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
  * for JavaScript based Bootstrap features such as modals and tabs. This
@@ -7,11 +8,10 @@ window._ = require('lodash');
  */
 
 try {
-    window.Popper = require('popper.js').default;
-    window.$ = window.jQuery = require('jquery');
+    window.$ = window.jQuery = require("jquery");
 
-    require('bootstrap');
-    require('admin-lte');
+    require("bootstrap");
+    require("admin-lte");
 } catch (e) {}
 
 /**
@@ -20,9 +20,9 @@ try {
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = require('axios');
+window.axios = require("axios");
 
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
